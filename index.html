@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reski — Personal Portfolio & Showcase</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        zinc: {
+                            950: '#09090b',
+                            900: '#121215',
+                            850: '#18181b',
+                            800: '#27272a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen selection:bg-emerald-500 selection:text-black antialiased">
+
+    <!-- Top Sticky Navigation -->
+    <header class="sticky top-0 z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-850">
+        <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2.5 group">
+                <span class="w-8 h-8 rounded-lg bg-emerald-500 text-zinc-950 font-black text-sm flex items-center justify-center tracking-tighter group-hover:scale-105 transition">
+                    R.
+                </span>
+                <span class="font-bold text-sm tracking-tight text-white group-hover:text-emerald-400 transition">
+                    Reski
+                </span>
+            </a>
+
+            <nav class="hidden sm:flex items-center gap-6 text-xs font-medium text-zinc-400">
+                <a href="#tentang" class="hover:text-white transition">Tentang</a>
+                <a href="#karya" class="hover:text-white transition">Karya &amp; Proyek</a>
+                <a href="#keahlian" class="hover:text-white transition">Keahlian</a>
+                <a href="#kalkulator" class="hover:text-white transition">Kalkulator Tani</a>
+                <a href="#kontak" class="hover:text-white transition">Kontak</a>
+            </nav>
+
+            <a href="#kontak" class="px-3.5 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-xs font-semibold text-white transition border border-zinc-700/60 flex items-center gap-1.5">
+                <span>Hubungi Saya</span>
+                <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-5 py-12 space-y-24">
+
+        <!-- Hero Section -->
+        <section class="space-y-6 pt-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-800/60 text-xs font-medium text-emerald-400">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Terbuka untuk Diskusi &amp; Kolaborasi Proyek</span>
+            </div>
+
+            <div class="space-y-3 max-w-3xl">
+                <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+                    Menggabungkan <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Agrikultur Presisi</span>, Visualisasi 3D, dan Sistem Komputasi.
+                </h1>
+                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                    Halo, saya <b>Reski</b>. Berfokus pada inovasi budidaya tanaman jagung berimbang, perancangan desain spasial &amp; 3D lanskap menggunakan Blender, serta eksplorasi pemrograman efisiensi tinggi di ekosistem Linux.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+                <a href="#karya" class="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold text-xs shadow-lg shadow-emerald-500/20 transition flex items-center gap-2">
+                    <span>Lihat Portofolio Karya</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </a>
+                <a href="#kalkulator" class="px-5 py-2.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 font-medium text-xs border border-zinc-800 transition flex items-center gap-2">
+                    <span>Coba Kalkulator Jagung</span>
+                    <span class="text-amber-400">🌽</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="tentang" class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start border-t border-zinc-850 pt-12">
+            <div class="space-y-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">01 // Profil</span>
+                <h2 class="text-xl font-bold text-white tracking-tight">Tentang Saya</h2>
+            </div>
+            
+            <div class="md:col-span-2 space-y-4 text-sm text-zinc-300 leading-relaxed">
+                <p>
+                    Saya memiliki ketertarikan mendalam pada titik temu antara <b>dunia pertanian tropis</b> dan <b>teknologi digital</b>. Melalui pendekatan pemodelan 3D dan kalkulasi berimbang, setiap aspek mulai dari pengolahan bedengan tanah, tata letak vegetasi, hingga efisiensi pemupukan hara jagung dapat divisualisasikan dan dihitung secara presisi.
+                </p>
+                <p class="text-zinc-400">
+                    Di sisi teknis, saya aktif mengeksplorasi ekosistem Linux mandiri (Gentoo Linux), komputasi ilmiah dengan Fortran dan Go, serta perancangan visual interaktif yang hemat sumber daya.
+                </p>
+            </div>
+        </section>
+
+        <!-- Featured Projects / Showcase Section -->
+        <section id="karya" class="space-y-8 border-t border-zinc-850 pt-12">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div class="space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">02 // Portofolio</span>
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Karya &amp; Eksplorasi Proyek</h2>
+                </div>
+                <p class="text-xs text-zinc-500">Kombinasi 3D modeling, komputasi ilmiah, dan arsitektur web.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Project 1: 3D Blender Corn Field -->
+                <div class="group bg-zinc-900/60 border border-zinc-850 rounded-2xl overflow-hidden hover:border-zinc-700 transition flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-video w-full bg-zinc-950 overflow-hidden relative">
+                            <img src="assets/kebun_jagung.png" alt="Render 3D Kebun Jagung" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-zinc-950/80 backdrop-blur-md text-[10px] font-mono text-zinc-300 border border-zinc-800">
+                                Blender 4.4
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <div class="text-[10px] uppercase font-bold text-amber-400 font-mono">3D Landscape &amp; Botany</div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">Visualisasi 3D Kebun Jagung &amp; Bedengan</h3>
+                            <p class="text-xs text-zinc-400 leading-relaxed">
+                                Pemodelan morfologi tanaman jagung tropis, topografi guludan bedengan tanah, serta sistem tata letak baris tanam untuk perencanaan kebun yang optimal.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex items-center gap-2">
+                        <span class="px-2 py-0.5 rounded text-[10px] bg-zinc-800 text-zinc-300">Blender</span>
+                        <span class="px-2 py-0.5 rounded text-[10px] bg-zinc-800 text-zinc-300">Cycles Render</span>
+                        <span class="px-2 py-0.5 rounded text-[10px] bg-zinc-800 text-zinc-300">Agritech</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: 3D Tree Vegetation -->
+                <div class="group bg-zinc-900/60 border border-zinc-850 rounded-2xl overflow-hidden hover:border-zinc-700 transition flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-video w-full bg-zinc-950 overflow-hidden relative">
+                            <img src="assets/pohon_kebun.png" alt="Render 3D Pohon Kebun" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-zinc-950/80 backdrop-blur-md text-[10px] font-mono text-zinc-300 border border-zinc-800">
+                                3D Environment
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <div class="text-[10px] uppercase font-bold text-emerald-400 font-mono">Vegetation Asset</div>
+                            <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">Modeling Vegetasi &amp; Pohon Kebun</h3>
+                            <p class="text-xs text-zinc-400 leading-relaxed">
+                                Eksplorasi pembuatan aset kanopi pohon, tekstur kulit kayu alami, dan simulasi pencahayaan outdoor alami untuk pendukung aset lanskap pertanian.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex items-center gap-2">
+                        <span class="px-2 py-0.5 rounded text-[10px] bg-zinc-800 text-zinc-300">Procedural Shading</span>
+                        <span class="px-2 py-0.5 rounded text-[10px] bg-zinc-800 text-zinc-300">Environment Art</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: AGRO/FORTRAN Engine -->
+                <div class="group bg-zinc-900/60 border border-zinc-850 rounded-2xl p-6 hover:border-zinc-700 transition flex flex-col justify-between md:col-span-2">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] uppercase font-bold text-cyan-400 font-mono">High Performance Scientific Computing</span>
+                            <span class="px-2.5 py-0.5 rounded text-[10px] font-mono bg-cyan-950 text-cyan-300 border border-cyan-800">Native Socket</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-cyan-300 transition">AGRO/FORTRAN — Precision Maize &amp; PDE Web Engine</h3>
+                        <p class="text-xs text-zinc-400 leading-relaxed max-w-2xl">
+                            Web server mandiri tanpa framework yang ditulis murni dalam <b>Fortran 2008</b> dan <b>Go</b>. Mengintegrasikan solver numerik persamaan diferensial (PDE) 2D, kalkulasi fenologi jagung (GDD), dan peramalan kebutuhan pupuk berimbang langsung lewat kernel POSIX socket.
+                        </p>
+                    </div>
+                    <div class="pt-6 flex flex-wrap items-center justify-between gap-4 border-t border-zinc-850 mt-4">
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-0.5 rounded text-[10px] bg-zinc-800 text-zinc-300">Fortran 2008</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] bg-zinc-800 text-zinc-300">Go (Golang)</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] bg-zinc-800 text-zinc-300">Linux POSIX</span>
+                            <span class="px-2 py-0.5 rounded text-[10px] bg-zinc-800 text-zinc-300">Bio-Agronomy</span>
+                        </div>
+                        <span class="text-xs font-mono text-emerald-400 font-semibold">Tersedia di PC Lokal (:8090 &amp; :8080)</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills & Stack Section -->
+        <section id="keahlian" class="space-y-6 border-t border-zinc-850 pt-12">
+            <div class="space-y-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">03 // Kapabilitas</span>
+                <h2 class="text-2xl font-bold text-white tracking-tight">Keahlian &amp; Toolchain</h2>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-850">
+                    <div class="text-emerald-400 text-base mb-2 font-bold font-mono">🌾 AGRI</div>
+                    <div class="font-semibold text-xs text-white">Budidaya Jagung</div>
+                    <div class="text-[11px] text-zinc-500 mt-1">Manajemen hara NPK, bedengan, &amp; estimasi panen.</div>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-850">
+                    <div class="text-amber-400 text-base mb-2 font-bold font-mono">🧊 3D ART</div>
+                    <div class="font-semibold text-xs text-white">Blender 4.4</div>
+                    <div class="text-[11px] text-zinc-500 mt-1">Modeling botani, denah, rendering Cycles, &amp; lanskap.</div>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-850">
+                    <div class="text-cyan-400 text-base mb-2 font-bold font-mono">⚡ KODING</div>
+                    <div class="font-semibold text-xs text-white">Fortran &amp; Go</div>
+                    <div class="text-[11px] text-zinc-500 mt-1">High-performance computing, array slicing, web socket.</div>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-900/50 border border-zinc-850">
+                    <div class="text-purple-400 text-base mb-2 font-bold font-mono">🐧 OS</div>
+                    <div class="font-semibold text-xs text-white">Linux (Gentoo)</div>
+                    <div class="text-[11px] text-zinc-500 mt-1">Kompilasi source, automasi shell scripting, dwm.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Precision Calculator Widget -->
+        <section id="kalkulator" class="border border-zinc-800 bg-zinc-900/40 rounded-3xl p-6 sm:p-8 space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-zinc-800 pb-4">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xl">🌽</span>
+                        <h2 class="text-lg font-bold text-white">Kalkulator Cepat Pupuk &amp; Hasil Panen</h2>
+                    </div>
+                    <p class="text-xs text-zinc-400 mt-0.5">Alat bantu interaktif untuk estimasi kebutuhan pupuk &amp; finansial jagung.</p>
+                </div>
+                <span class="text-[11px] font-mono text-zinc-500">Live Client Calculation</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <!-- Inputs -->
+                <div class="md:col-span-5 space-y-4">
+                    <div>
+                        <label class="block text-xs text-zinc-400 mb-1">Luas Lahan Kebun</label>
+                        <select id="calc-lahan" onchange="runCalc()" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500">
+                            <option value="0.5">0.5 Hektar (5.000 m²)</option>
+                            <option value="1.0" selected>1.0 Hektar (10.000 m²)</option>
+                            <option value="2.0">2.0 Hektar</option>
+                            <option value="5.0">5.0 Hektar</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-zinc-400 mb-1">Target Panen Pipil Kering</label>
+                        <select id="calc-target" onchange="runCalc()" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500">
+                            <option value="6.0">6.0 Ton / Hektar (Standar)</option>
+                            <option value="8.5" selected>8.5 Ton / Hektar (Optimal)</option>
+                            <option value="10.5">10.5 Ton / Hektar (Hibrida Unggul)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-zinc-400 mb-1">Ekspektasi Harga Jual Pasar</label>
+                        <select id="calc-harga" onchange="runCalc()" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-emerald-500">
+                            <option value="4500">Rp 4.500 / kg</option>
+                            <option value="5200" selected>Rp 5.200 / kg (Normal)</option>
+                            <option value="6000">Rp 6.000 / kg (Bagus)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Live Results -->
+                <div class="md:col-span-7 bg-zinc-950 p-5 rounded-2xl border border-zinc-800/80 space-y-4 flex flex-col justify-between">
+                    <div>
+                        <div class="text-[10px] font-mono uppercase tracking-wider text-zinc-500 mb-2">Hasil Perhitungan Presisi</div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="p-3 rounded-xl bg-zinc-900 border border-zinc-800">
+                                <div class="text-[10px] text-zinc-400">Estimasi Laba Bersih</div>
+                                <div id="res-laba" class="text-xl font-black text-emerald-400 mt-0.5">Rp 29.1 Jt</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-zinc-900 border border-zinc-800">
+                                <div class="text-[10px] text-zinc-400">Total Omzet Penjualan</div>
+                                <div id="res-omzet" class="text-xl font-black text-zinc-100 mt-0.5">Rp 44.2 Jt</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="text-[10px] font-mono uppercase tracking-wider text-amber-400 mb-1.5">Kebutuhan Pupuk Utama</div>
+                        <div class="grid grid-cols-3 gap-2 text-xs">
+                            <div class="p-2.5 rounded-lg bg-zinc-900/60 border border-zinc-800/60">
+                                <div class="text-[10px] text-zinc-500">Urea</div>
+                                <div id="res-urea" class="font-bold text-white">806 kg</div>
+                            </div>
+                            <div class="p-2.5 rounded-lg bg-zinc-900/60 border border-zinc-800/60">
+                                <div class="text-[10px] text-zinc-500">SP-36</div>
+                                <div id="res-sp36" class="font-bold text-white">413 kg</div>
+                            </div>
+                            <div class="p-2.5 rounded-lg bg-zinc-900/60 border border-zinc-800/60">
+                                <div class="text-[10px] text-zinc-500">KCl</div>
+                                <div id="res-kcl" class="font-bold text-white">392 kg</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="kontak" class="border-t border-zinc-850 pt-12 space-y-6">
+            <div class="space-y-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">04 // Koneksi</span>
+                <h2 class="text-2xl font-bold text-white tracking-tight">Mari Berdiskusi</h2>
+                <p class="text-xs text-zinc-400 max-w-md">
+                    Tertarik berkolaborasi seputar agritech, modeling 3D Blender, atau implementasi software? Silakan hubungi saya melalui jalur berikut.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-3">
+                <a href="https://wa.me/" target="_blank" class="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg shadow-emerald-600/20 transition flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.115.549 4.103 1.511 5.834l-1.607 5.875 6.042-1.585c1.674.914 3.593 1.439 5.631 1.439 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
+                    <span>WhatsApp Langsung</span>
+                </a>
+                <a href="mailto:reski@example.com" class="px-5 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 font-semibold text-xs border border-zinc-800 transition flex items-center gap-2">
+                    <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <span>Kirim Email</span>
+                </a>
+                <a href="https://github.com/" target="_blank" class="px-4 py-3 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white border border-zinc-800 transition">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Clean Footer -->
+    <footer class="border-t border-zinc-900 py-8 text-center text-xs text-zinc-600 font-mono">
+        <div>&copy; 2026 Reski • Dibuat dengan presisi &amp; kesederhanaan.</div>
+        <div class="mt-1 text-[11px] text-zinc-700">Siap di-deploy ke GitHub Pages secara gratis.</div>
+    </footer>
+
+    <script>
+        function runCalc() {
+            const lahan = parseFloat(document.getElementById('calc-lahan').value);
+            const target = parseFloat(document.getElementById('calc-target').value);
+            const harga = parseFloat(document.getElementById('calc-harga').value);
+
+            // Pupuk
+            const urea = Math.round((target * 24.0 / 0.46 / 0.55) * lahan);
+            const sp36 = Math.round((target * 7.0 / 0.36 / 0.40) * lahan);
+            const kcl = Math.round((target * 18.0 / 0.60 / 0.65) * lahan);
+
+            // Finansial
+            const totalKg = target * 1000 * lahan;
+            const omzet = (totalKg * harga) / 1000000;
+            const modal = ((1350000 * lahan) + (urea * 4500) + (sp36 * 5500) + (kcl * 8500) + (4500000 * lahan)) / 1000000;
+            const laba = omzet - modal;
+
+            document.getElementById('res-laba').innerText = 'Rp ' + laba.toFixed(1) + ' Jt';
+            document.getElementById('res-omzet').innerText = 'Rp ' + omzet.toFixed(1) + ' Jt';
+            document.getElementById('res-urea').innerText = urea + ' kg';
+            document.getElementById('res-sp36').innerText = sp36 + ' kg';
+            document.getElementById('res-kcl').innerText = kcl + ' kg';
+        }
+        runCalc();
+    </script>
+</body>
+</html>

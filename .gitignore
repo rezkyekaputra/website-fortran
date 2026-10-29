@@ -1,0 +1,17 @@
+# Fortran compiled binaries and modules
+personal_site
+*.o
+*.mod
+
+# Logs & temp files
+*.log
+/tmp/
+
+# Backups
+*.bak
+*~
+server_backup_legacy.f90
+
+# OS files
+.DS_Store
+Thumbs.db
